@@ -1,33 +1,33 @@
-const { Livro } = require('../models');
+const { Curso } = require('../models');
 
 module.exports = {
     async index(req, res) {
         try {
-            const livros = await Livro.findAll();
-            return res.status(200).json(livros);
+            const cursos = await Curso.findAll();
+            return res.status(200).json(cursos);
         } catch (err) {
             return res.status(400).json(err);
         }
     },
     async show(req, res) {
         try {
-            const livro = await Livro.findByPk(req.params.id);
-            return res.status(200).json(livro);
+            const curso = await Curso.findByPk(req.params.id);
+            return res.status(200).json(curso);
         } catch (err) {
             return res.status(400).json(err);
         }
     },
     async store(req, res) {
         try {
-            const livro = await Livro.create(req.body);
-            return res.status(201).json(livro);
+            const curso = await Curso.create(req.body);
+            return res.status(201).json(curso);
         } catch (err) {
             return res.status(400).json(err);
         }
     },
     async update(req, res) {
         try {
-            const livro = await Livro.update(req.body, {
+            const curso = await Curso.update(req.body, {
                 where: {
                     id: req.params.id
                 }
@@ -42,7 +42,7 @@ module.exports = {
     },
     async destroy(req, res) {
         try {
-            const livro = await Livro.destroy({
+            const curso = await Curso.destroy({
                 where: {
                     id: req.params.id
                 }

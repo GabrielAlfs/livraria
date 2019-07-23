@@ -17,5 +17,5 @@ sequelize.sync().then(() => {
         console.log(`[API 🤖] Listening on port ${port} ✅.`);
     });
 }).catch(err => {
-    console.error('[DB 💾] Unable to connect to the database 🚨', err.name);
+    console.error('[DB 💾] Unable to connect to the database 🚨', err);
 });

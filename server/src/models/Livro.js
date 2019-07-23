@@ -26,14 +26,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       min: 0,
       type: DataTypes.INTEGER
-    },
-    createdAt: {
-      allowNull: false,
-      type: DataTypes.DATE
-    },
-    updatedAt: {
-      allowNull: false,
-      type: DataTypes.DATE
     }
   }, {
     sequelize,
